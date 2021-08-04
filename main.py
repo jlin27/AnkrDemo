@@ -11,7 +11,7 @@ print("Welcome to the Demo Token App")
 question = [
   inquirer.List('action',
                 message="What would you like to do?",
-                choices=['Mint A Token', 'Get Token Balance', 'Send Tokens'],
+                choices=['Mint Tokens', 'Get Token Balance', 'Send Tokens'],
             ),
 ]
 answer = inquirer.prompt(question)['action']
@@ -27,10 +27,10 @@ if answer == 'Get Token Balance':
     token_address = inquirer.prompt(question)['address']
     print(get_balance(token_address))
 
-# Option - Mint Token
+# Option - Mint Tokens
 # Sends an amount of newly created tokens to an address using mint() from token.py
 # Will only work if called by the contract creator
-elif answer == 'Mint A Token':
+elif answer == 'Mint Tokens':
     print("Minting A Token \n(Note: Only the account that deployed the smart contract can mint tokens)")
     questions = [
         inquirer.Text('amount',
