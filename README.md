@@ -73,7 +73,7 @@ Now we can interact with the app. Fire up the app by running the `main.py` Pytho
 	 * **Get Token Balance** - Returns the token balance from a given ETH address. 
 	 * **Send Tokens** - Sends tokens from one address to another. User enters the sender and receiver's ETH addresses, the number of tokens to be sent, and the sender's private key (Note: The balances may not immediately update because the transactions may take a while to be added to the blockchain).
 
-<img src="https://drive.google.com/uc?export=view&id=14Kw4iLlkqW21tQaphkzl6TIUVQ78q8IH" alt="Running script in terminal" width="500"/>
+<img src="https://drive.google.com/uc?export=view&id=1g5I5tDGP3ATAQhE8Vrb35yZhxeLUwzre" alt="Running script in terminal" width="500"/>
 
 
 ## Resources
