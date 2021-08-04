@@ -21,7 +21,7 @@ This is a simple python app that interacts with the Ethereum blockchain through 
 
 This app creates a simple, non-ERC20 token (based off of the [Solidity example](https://docs.soliditylang.org/en/v0.8.6/introduction-to-smart-contracts.html#subcurrency-example)). The contract allows only its creator to create new tokens; however, anyone can send tokens to each other. Anyone can also read the token balance from a given address. 
 
-Below is a screenshot of the CLI-based UI from which users can choose from one of three tasks - Mint A Token, Get Token Balance, Send Tokens - all using Ethereum addresses. 
+Below is a screenshot of the CLI-based UI from which users can choose from one of three tasks - Mint Tokens, Get Token Balance, Send Tokens - all using Ethereum addresses. 
 
 <img src="https://drive.google.com/uc?export=view&id=1Hpo01h5jMXIVUUcZQmjGgYku-JQ7FbYO" alt="CLI screenshot" width="500"/>
 
@@ -69,7 +69,7 @@ Next, you will need to compile and deploy the smart contract. There are a number
 Now we can interact with the app. Fire up the app by running the `main.py` Python script in your terminal and start minting and sharing your tokenw!
 * From the virtualenv in a CLI, run `python3 main.py`
  * From the prompts, choose from one of the 3 options:
-	 * **Mint A Token** - A specified number of tokens are minted and sent to the recipient's address. User enters the number of tokens to mint and an ETH address that will receive these tokens (Note: Only the account that deployed the smart contract can mint tokens; however, anyone can receive the token. The minter's private key is required to complete this transaction). 
+	 * **Mint Tokens** - A specified number of tokens are minted and sent to the recipient's address. User enters the number of tokens to mint and an ETH address that will receive these tokens (Note: Only the account that deployed the smart contract can mint tokens; however, anyone can receive the token. The minter's private key is required to complete this transaction). 
 	 * **Get Token Balance** - Returns the token balance from a given ETH address. 
 	 * **Send Tokens** - Sends tokens from one address to another. User enters the sender and receiver's ETH addresses, the number of tokens to be sent, and the sender's private key (Note: The balances may not immediately update because the transactions may take a while to be added to the blockchain).
 
@@ -82,7 +82,8 @@ Now we can interact with the app. Fire up the app by running the `main.py` Pytho
 * [Subcurrencey Solidity Smart Contract Example](https://docs.soliditylang.org/en/v0.8.6/introduction-to-smart-contracts.html#subcurrency-example)
 
 ### Common Errors
-* If you receive *ValueError: {'code': -32000, 'message': 'only replay-protected (EIP-155) transactions allowed over RPC'}*, make sure to add chainId in transaction body [(Source)](https://ethereum.stackexchange.com/questions/94412/valueerror-code-32000-message-only-replay-protected-eip-155-transac)
-* If you receive *ValueError: {'code': -32000, 'message': 'already known'}*, the transaction is still processing
+* If you receive *ValueError: {'code': -32000, 'message': 'only replay-protected (EIP-155) transactions allowed over RPC'}*, make sure to add chainId in transaction body [(Source)](https://ethereum.stackexchange.com/questions/94412/valueerror-code-32000-message-only-replay-protected-eip-155-transac).
+* If you receive *ValueError: {'code': -32000, 'message': 'already known'}*, the transaction is still processing.  Wait a bit and try again. 
+* If you recieve *ValueError: {'code': -32000, 'message': 'nonce too low'}*, the transaction is still processing. Wait a bit and try again. 
 * If after you send tokens to an address and the balance is does not update, it may be that the transactions have not been added to the blockchain yet. Either check the status of the transaction hash (retreive from `demo_token.py`) or give it some time. 
 
