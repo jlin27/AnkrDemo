@@ -25,7 +25,7 @@ if answer == 'Get Token Balance':
                     message="Enter an ETH address: "),
     ]
     token_address = inquirer.prompt(question)['address']
-    print(get_balance(token_address))
+    print("This account has " + str(get_balance(token_address)) + " tokens")
 
 # Option - Mint Tokens
 # Sends an amount of newly created tokens to an address using mint() from token.py
