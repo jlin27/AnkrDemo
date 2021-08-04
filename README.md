@@ -1,4 +1,4 @@
-# Ankr Demo - Minting and Sending A Token
+# Ankr Demo - Mint and Send Tokens
 
 ## Table of Contents
 
