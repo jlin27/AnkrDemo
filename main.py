@@ -2,7 +2,7 @@
 User entry-point into the app
 """
 import inquirer
-from token import *
+from demo_token import *
 
 print("Welcome to the Demo Token App")
 
@@ -28,7 +28,7 @@ if answer == 'Get Token Balance':
     print(get_balance(token_address))
 
 # Option - Mint Token
-# Sends an amount of newly created coins to an address using mint() from token.py
+# Sends an amount of newly created tokens to an address using mint() from token.py
 # Will only work if called by the contract creator
 elif answer == 'Mint A Token':
     print("Minting A Token \n(Note: Only the account that deployed the smart contract can mint tokens)")
@@ -44,7 +44,7 @@ elif answer == 'Mint A Token':
     mint(answers['receiver_address'], int(answers['amount']), answers['signature'])
 
 # Option - Send Tokens
-# Sends an amount of existing created coins from any caller to any receiver using send() from token.py
+# Sends an amount of existing created tokens from any caller to any receiver using send() from token.py
 elif answer == 'Send Tokens':
     print("Sending Tokens")
     questions = [
