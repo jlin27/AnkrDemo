@@ -52,7 +52,7 @@ To start, you need to connect to the Ethereum blockchain. There are different wa
 
 <img src="https://drive.google.com/uc?export=view&id=1Y2oCt9osf3ZdIdhw4AtDD8j64SlwZnJ1" alt="Testnest option" width="500"/>
 
-* Select either the Basic authentication or Token method. In my example, I use the Token method which does not require a Project username and password. If you use the Basic authentication method, make sure to format the Web3 HTTPProvider call properly as [discussed here](https://stackoverflow.com/a/68646478/16590504).
+* Select either the Basic authentication or Token method. In my example, I use the Basic authentication method which requires a Project username and password. The Basic authentication method requires formatting the Web3 HTTPProvider call properly as [discussed here](https://stackoverflow.com/a/68646478/16590504). This is the relevant code in [demo_token.py](https://github.com/jlin27/AnkrDemo/blob/main/demo_token.py#L10-L18).
 
 <img src="https://drive.google.com/uc?export=view&id=1Y2oCt9osf3ZdIdhw4AtDD8j64SlwZnJ1" alt="Token method" width="500"/>
 
