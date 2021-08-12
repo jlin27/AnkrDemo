@@ -30,9 +30,11 @@ This project is intended for developers with a basic familiarity with concepts s
 
 ## Installation Requirements
 -   Python 3
--   Install requirements:
+-   Install virtualenv: `pip3 install virtualenv`
+-   Install requirements inside the virutalenv you've created (ex: demoenv):
      ```
      cd AnkrDemo
+     source demoenv/bin/activate
      pip3 install -r requirements.txt
      ```
      
