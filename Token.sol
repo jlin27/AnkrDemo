@@ -35,7 +35,6 @@ contract Token {
     /// @notice Mints the given number of tokens and sends to the receiving address. Can only be run by the contract creator
     /// @dev This does not return any value
     /// @param receiver address, amount of tokens to be delivered
-    /// @return Nothing
     function mint(address payable receiver, uint amount) public {
         require(msg.sender == minter);
         balances[receiver] += amount;
@@ -47,7 +46,6 @@ contract Token {
     /// @notice Sends an amount of existing tokens to a receiving address
     /// @dev This does not return any value
     /// @param receiver address, amount of tokens to be delivered
-    /// @return Nothing
     function send(address payable receiver, uint amount) public {
         if (amount > balances[msg.sender])
             revert InsufficientBalance({
