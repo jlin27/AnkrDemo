@@ -2,10 +2,20 @@ import os
 import json
 from dotenv import load_dotenv
 from web3 import Web3
+import requests
+import base64
 
 load_dotenv()
 node_provider = os.environ['NODE_PROVIDER']
-w3 = Web3(Web3.HTTPProvider(node_provider))
+s = requests.Session()
+
+# Make sure to use the Project Username and not your log-in username
+upass = "myProjectUsername:password".encode("ascii")
+b64 = base64.b64encode(upass).decode("ascii")
+
+s.headers.update({'Authorization': 'Basic ' + b64})
+
+w3 = Web3(Web3.HTTPProvider(node_provider, session=s))
 
 # Confirms if the connection succeeded 
 def is_connected():
