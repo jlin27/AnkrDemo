@@ -33,7 +33,7 @@ This project is intended for developers with a basic familiarity with concepts s
 -   Install requirements:
      ```
      cd AnkrDemo
-     pip install -r requirements.txt
+     pip3 install -r requirements.txt
      ```
      
 ## How To Use
