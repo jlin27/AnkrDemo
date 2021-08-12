@@ -17,7 +17,7 @@
 
 This is a simple python app that interacts with the Ethereum blockchain through [Web3.py](https://web3py.readthedocs.io/en/stable/), an [Ankr API endpoint](https://www.ankr.com/), and a [Solidity](https://docs.soliditylang.org/en/stable/) smart contract. Users can interact with the app through the command line (CLI).
 
-<img src="https://drive.google.com/uc?export=view&id=1pGJD71PCc5POlR-FXHAmsLSglXSK4Gir" alt="Diagram" width="500"/>
+<img src="https://drive.google.com/uc?export=view&id=1u5Jx_5tNuIXfH3wYfB1g6iEwqucPFj5J" alt="Diagram" width="500"/>
 
 This app creates a simple, non-ERC20 token (based off of the [Solidity example](https://docs.soliditylang.org/en/v0.8.6/introduction-to-smart-contracts.html#subcurrency-example)). The contract allows only its creator to create new tokens; however, anyone can send tokens to each other. Anyone can also read the token balance from a given address. 
 
