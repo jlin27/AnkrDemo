@@ -63,7 +63,7 @@ Next, you will need to compile and deploy the smart contract. There are a number
 * Install [MetaMask](https://metamask.io/) and create an account. This is a browser extension that will allow you to interact with the Ethereum blockchain through your browser. 
 * Fund your MetaMask account with ETH from a faucet such as [this Ropsten faucet](https://metamask.io/).
 * Open `Token.sol` in [Remix](https://remix.ethereum.org/). Compile the smart contract. Deploy it using the "Injected Web3" environment which will use funds from your MetaMask account. 
-* Copy the contract's ABI and bytecode and paste into `.env` as the values of `CONTRACT_ABI` and `CONTRACT_BYTECODE`, respectively.
+* Copy the contract's ABI, bytecode, and contract address and paste into the `.env` file as the values of `CONTRACT_ABI`, `CONTRACT_BYTECODE`, `CONTRACT_ADDRESS` respectively.
 
 ### Step 3. Interact with Smart Contract Using Python
 Now we can interact with the app. Fire up the app by running the `main.py` Python script in your terminal and start minting and sharing your tokenw!
